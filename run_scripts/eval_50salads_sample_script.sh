@@ -1,0 +1,1 @@
+python eval.py --dataset_name 50salads --cudad 3 --base_dir base_data_dir
