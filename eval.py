@@ -88,7 +88,7 @@ if args.dataset_name == "breakfast":
     config.back_gd = ['SIL']
     config.split = [1, 2, 3, 4]
     if not args.compile_result:
-        config.chunk_size = list(range(8,16))
+        config.chunk_size = list(range(6, 13))
         config.weights = np.ones(len(config.chunk_size))
     else:
         config.chunk_size = [10]
@@ -130,9 +130,10 @@ else: # if args.dataset_name == "50salads":
 
     
 if args.split is not None:
-    if isinstance(args.split, int):
-        config.split = [args.split)
-    else:
+    try:
+        args.split = int(args.split)
+        config.split = [args.split]
+    except:
         config.split = args.split.split(',')
 
 config.features_file_name = config.base_dir + "/features/"
@@ -146,8 +147,8 @@ def model_pipeline(config):
     f1_10_list = []
     f1_25_list = []
     f1_50_list = []
-    for ele in range(1, config.num_of_splits+1):
-        config.output_dir = config.base_dir + "results/trym{}_split{}_aug{}".format(config.model_path, ele, config.aug)
+    for ele in config.split:
+        config.output_dir = config.base_dir + "results/supervised_C2FTCN/split{}".format(ele) #, onfig.model_path, ele, config.aug)
         # if args.wd is not None:
         #     config.weight_decay = args.wd
         #     config.output_dir=config.output_dir + "_wd{:.5f}".format(config.weight_decay)

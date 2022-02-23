@@ -137,6 +137,7 @@ class C2F_TCN(nn.Module):
         self.up4 = up(384, 128)
         self.outcc = outconv(128, n_classes)
         self.tpp = TPPblock(128)
+        self.weights = torch.nn.Parameter(torch.ones(6))
 
     def forward(self, x):
         x1 = self.inc(x)

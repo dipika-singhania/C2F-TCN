@@ -93,8 +93,12 @@ else: # args.dataset_name == "50salads":
     config.back_gd = ['action_start', 'action_end']
     config.ensem_weights = [1, 1, 1, 1, 0, 0]
 
-config.output_dir = config.base_dir + "results/trym{}_split{}_aug{}".format(args.model_path, config.split_number,
-                                                                                  config.aug)
+config.output_dir = config.base_dir + "results/supervised_C2FTCN/"
+if not os.path.exists(config.output_dir):
+    os.mkdir(config.output_dir)
+
+config.output_dir = config.output_dir + "split{}".format(config.split_number)
+
 if args.wd is not None:
     config.weight_decay = args.wd
     config.output_dir=config.output_dir + "_wd{:.5f}".format(config.weight_decay)
