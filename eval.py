@@ -88,7 +88,7 @@ if args.dataset_name == "breakfast":
     config.back_gd = ['SIL']
     config.split = [1, 2, 3, 4]
     if not args.compile_result:
-        config.chunk_size = list(range(6, 13))
+        config.chunk_size = list(range(7, 16))
         config.weights = np.ones(len(config.chunk_size))
     else:
         config.chunk_size = [10]
@@ -178,7 +178,7 @@ def model_pipeline(config):
         model.load_state_dict(load_best_model(config))
         prefix = ''
 
-        model.eval()
+        # model.eval()
 
 
         correct, correct1, total = 0, 0, 0
