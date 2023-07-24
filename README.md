@@ -2,6 +2,11 @@
 
 Official implementation of Coarse to Fine Multi-Resolution Temporal Convolutional Network for Temporal Action Segmentation [link](https://arxiv.org/pdf/2105.10859.pdf)
 
+Code for full supervsion version of ‘C2F-TCN: A Framework for Semi- and Fully-Supervised Temporal Action Segmentation’ [link] (https://ieeexplore.ieee.org/abstract/document/10147035) published in TPAMI-2023.
+
+Code for semi-supervised version of the same is available at [link](https://github.com/dipika-singhania/ICC-Semi-Supervised-TAS).
+
+
 
 ### Data download and directory structure:
 
@@ -50,6 +55,9 @@ Change the dataset_name,  to run on a different dataset.
 
 If you use the code, please cite
 
-    D Singhania, R Rahaman, A Yao
-    Coarse to fine multi-resolution temporal convolutional network.
-    arXiv preprint 
+D. Singhania, R. Rahaman and A. Yao, "C2F-TCN: A Framework for Semi- and Fully-Supervised Temporal Action Segmentation," in IEEE Transactions on Pattern Analysis and Machine Intelligence, doi: 10.1109/TPAMI.2023.3284080.
+
+Singhania, D., Rahaman, R., & Yao, A. (2022, June). Iterative contrast-classify for semi-supervised temporal action segmentation. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 36, No. 2, pp. 2262-2270).
+
+
+    
