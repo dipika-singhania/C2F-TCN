@@ -2,7 +2,7 @@
 
 Official implementation of Coarse to Fine Multi-Resolution Temporal Convolutional Network for Temporal Action Segmentation [link](https://arxiv.org/pdf/2105.10859.pdf)
 
-Code for full supervsion version of ‘C2F-TCN: A Framework for Semi- and Fully-Supervised Temporal Action Segmentation’ [link] (https://ieeexplore.ieee.org/abstract/document/10147035) published in TPAMI-2023.
+Code for full supervsion version of ‘C2F-TCN: A Framework for Semi- and Fully-Supervised Temporal Action Segmentation’ [link](https://ieeexplore.ieee.org/abstract/document/10147035) published in TPAMI-2023.
 
 Code for semi-supervised version of the same is available at [link](https://github.com/dipika-singhania/ICC-Semi-Supervised-TAS).
 
